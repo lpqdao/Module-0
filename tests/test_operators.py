@@ -141,7 +141,7 @@ def test_distribute(x, y, z):
     :math:`z \times (x + y) = z \times x + z \times y`
     """
     None
-    # TODO: Implement for Task 0.2.
+
     assert_close
     (
         mul
