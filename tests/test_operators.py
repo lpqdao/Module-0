@@ -22,7 +22,7 @@ from hypothesis.strategies import lists
 from .strategies import small_floats, assert_close
 import pytest
 from minitorch import MathTest
-
+from random import random
 
 # ## Task 0.1 Basic hypothesis tests.
 
@@ -123,25 +123,29 @@ def test_transitive(a, b, c):
 
 
 @pytest.mark.task0_2
-def test_symmetric(x, y):
+def test_symmetric():
     """
     Write a test that ensures that :func:`minitorch.operators.mul` is symmetric, i.e.
     gives the same value regardless of the order of its input.
     """
-    None
+    #None
     # TODO: Implement for Task 0.2.
+    x = random()
+    y = random()
     assert mul(x, y) == mul(y, x)
     # raise NotImplementedError('Need to implement for Task 0.2')
 
 
 @pytest.mark.task0_2
-def test_distribute(x, y, z):
+def test_distribute():
     r"""
     Write a test that ensures that your operators distribute, i.e.
     :math:`z \times (x + y) = z \times x + z \times y`
     """
-    None
-
+    #None
+    x = random()
+    y = random()
+    z = random()
     assert_close
     (
         mul
@@ -159,11 +163,12 @@ def test_distribute(x, y, z):
 
 
 @pytest.mark.task0_2
-def test_add_inv(x):
+def test_add_inv():
     """
     Write a test that ensures some other property holds for your functions.
     """
-    None
+    #None
+    x = random()
     # TODO: Implement for Task 0.2.
     assert_close(add(x, neg(x)), 0)
     # raise NotImplementedError('Need to implement for Task 0.2')
