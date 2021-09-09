@@ -5,12 +5,11 @@
 
 Parameters:
 
-- Number of points: 117
-- Size of hidden layers: 6
-- Learning rate: 0.05
-- Epochs: 1000
+- Parameter: linear.weight_0_0: -7.22
+- Parameter: linear.weight_1_0: 3.04
+- Parameter: linear.bias_: 2.23
 
-![image](https://user-images.githubusercontent.com/37049175/132740625-b6d98b2d-0483-4340-bc6e-befe0c91acb1.png)
+![image](https://user-images.githubusercontent.com/37049175/132772460-314867ac-a3ca-41cd-a049-c421fc7befa8.png)
 
 
 * Docs: https://minitorch.github.io/
