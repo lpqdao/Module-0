@@ -104,14 +104,12 @@ def test_sigmoid(a):
     * It crosses 0 at 0.5
     * it is  strictly increasing.
     """
-    # if a >= 0:
-    #     assert 1.0 /(1.0 + math.exp(-x)) == sigmoid(a)
-    # else:
-    #     assert math.exp(x)/(1.0 + math.exp(x)) == sigmoid(a)
-    
-    #assert_close()
-    # TODO: Implement for Task 0.2.
-    raise NotImplementedError('Need to implement for Task 0.2')
+    assert (sigmoid(a) >= 0 and sigmoid(a) <= 1)
+    assert sigmoid(a) >= sigmoid(a-1)
+    assert_close(1 - sigmoid(a), sigmoid(-a))
+    if a == 0.5:
+        assert sigmoid(a) > 0
+    #raise NotImplementedError('Need to implement for Task 0.2')
 
 
 @pytest.mark.task0_2
@@ -119,7 +117,8 @@ def test_sigmoid(a):
 def test_transitive(a, b, c):
     "Test the transitive property of less-than (a < b and b < c implies a < c)"
     # TODO: Implement for Task 0.2.
-    assert lt(a, b) and lt(b, c) == lt(a, c)
+    if a<b and b<c:
+        assert a<c
     # raise NotImplementedError('Need to implement for Task 0.2')
 
 
