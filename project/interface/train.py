@@ -51,7 +51,7 @@ def render_train_interface(
 
     if parameter_control:
         st.markdown("### Parameters")
-        for n, p in train.model.named_parameters():
+        for n, p in train.model.named_parameters().items():
             value = st.slider(
                 f"Parameter: {n}", min_value=-10.0, max_value=10.0, value=p.value
             )
